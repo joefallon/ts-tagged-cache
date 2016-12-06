@@ -1,0 +1,34 @@
+{
+  "name": "ts-tagged-cache",
+  "version": "0.0.0",
+  "description": "A tagged cached written in TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "debug": "./node_modules/mocha/bin/mocha --recursive --debug-brk",
+    "test": "./node_modules/mocha/bin/mocha --recursive -s 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joefallon/ts-tagged-cache.git"
+  },
+  "keywords": [
+    "tag",
+    "cache",
+    "tagged cache",
+    "TypeScript"
+  ],
+  "author": "Joe Fallon <joseph.t.fallon@gmail.com> (http://blog.joefallon.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joefallon/ts-tagged-cache/issues"
+  },
+  "homepage": "https://github.com/joefallon/ts-tagged-cache#readme",
+  "types": "./src",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.32",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
