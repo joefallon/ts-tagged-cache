@@ -1,4 +1,3 @@
-///<reference path="memcached.d.ts"/>
 import Memcached = require('memcached');
 
 import {ICacheable} from './ICacheable';
@@ -12,11 +11,21 @@ class MemcachedAdapter implements ICacheable {
     }
 
     public store(key:string, data:any, cb:(err:Error)=>void):any {
-        this._cached.set(key, data, cb);
+        this._cached.set(key, data, 0, cb);
     }
 
     public retrieve(key:string, cb:(err:Error, data:any)=>void):any {
-        this._cached.get(key, cb);
+        this._cached.get(key, normalizeData);
+
+        function normalizeData(err:Error, data:any) {
+            if(err) {
+                cb(err, null);
+            } else if(typeof data == 'undefined') {
+                cb(null, null);
+            } else {
+                cb(null, data);
+            }
+        }
     }
 
     public remove(key:string, cb:(err:Error)=>void):any {

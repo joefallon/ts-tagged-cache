@@ -1,4 +1,3 @@
-/// <reference path="memcached.d.ts" />
 import { ICacheable } from './ICacheable';
 declare class MemcachedAdapter implements ICacheable {
     private _cached;

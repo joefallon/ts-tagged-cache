@@ -14,11 +14,12 @@ declare class Memcached {
     /**
      * Stores a new value in Memcached.
      *
-     * @param key   the name of the key
-     * @param data  either a buffer, JSON, number or string that you want to store
-     * @param cb    the callback
+     * @param key                the name of the key
+     * @param data               either a buffer, JSON, number or string that you want to store
+     * @param lifetimeInSeconds  how long the data needs to be stored measured in seconds
+     * @param cb                 the callback
      */
-    set(key:string, data:any, cb:(err:Error)=>void);
+    set(key:string, data:any, lifetimeInSeconds:number, cb:(err:Error)=>void);
 
     /**
      * Remove the key from memcached.
