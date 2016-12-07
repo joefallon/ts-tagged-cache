@@ -5,7 +5,7 @@ let assert  = chai.assert;
 
 
 describe('MemcachedAdapter', () => {
-    it('test #store and #retrieve returns value when exists', (done) => {
+    it('test #store and #retrieve with value', (done) => {
         let obj   = {'val1':1, 'val2':'two'};
         let cache = MemcachedAdapterTestFactory.create();
         cache.store('test_store_and_retrieve', obj, retrieveValue);

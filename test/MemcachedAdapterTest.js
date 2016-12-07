@@ -3,7 +3,7 @@ var MemcachedAdapterTestFactory = require('./MemcachedAdapterTestFactory');
 var chai = require('chai');
 var assert = chai.assert;
 describe('MemcachedAdapter', function () {
-    it('test #store and #retrieve returns value when exists', function (done) {
+    it('test #store and #retrieve with value', function (done) {
         var obj = { 'val1': 1, 'val2': 'two' };
         var cache = MemcachedAdapterTestFactory.create();
         cache.store('test_store_and_retrieve', obj, retrieveValue);

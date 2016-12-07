@@ -31,5 +31,9 @@
     "chai": "^3.5.0",
     "memcached": "^2.2.2",
     "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.42",
+    "lodash": "^4.17.2"
   }
 }
